@@ -1,1 +1,2 @@
 CampusNotes keeps class notes in one place.
+Review your notes after each class.
