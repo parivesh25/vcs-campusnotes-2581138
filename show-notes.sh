@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-cat notes.txt
+cat -- "$(dirname -- "$0")/notes.txt"
