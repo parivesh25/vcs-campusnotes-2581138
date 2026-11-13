@@ -5,3 +5,4 @@ Edited from second clone
 
 From the repository folder, run `bash show-notes.sh` in Git Bash.
 The command prints the contents of `notes.txt`.
+Contact: campusnotes team
