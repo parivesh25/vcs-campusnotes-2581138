@@ -1,0 +1,1 @@
+CampusNotes keeps class notes in one place.
