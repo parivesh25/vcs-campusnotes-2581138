@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+while IFS= read -r -d '' file; do
+    git --literal-pathspecs grep --cached -a -l -F \
+        -e 'TO''DO' -e 'FIX''ME' -- "$file"
+    case $? in
+        0) echo "pre-commit: blocked by an unfinished marker."; exit 1 ;;
+        1) ;; # No match, so keep checking.
+        *) echo "pre-commit: could not scan $file."; exit 1 ;;
+    esac
+done < <(git diff --cached --name-only --diff-filter=ACMRT -z)
